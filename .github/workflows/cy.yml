@@ -19,10 +19,7 @@ permissions:
 jobs:
   build:
 
-    runs-on: ${{matrix.os}}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest, macOS-latest]
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
@@ -37,7 +34,7 @@ jobs:
         arguments: build
 
     - name: Build and Push Docker Image
-      uses: mr-smithers-excellent/docker-build-push@v4
+      uses: mr-smithers-excellent/docker-build-push@v6
       with:
         image: robiwork/demo-app-technana
         registry: docker.io
