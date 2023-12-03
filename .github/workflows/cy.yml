@@ -34,6 +34,7 @@ jobs:
         image: robiwork/demo-app-technana
         registry: docker.io
         enableBuildKit: true
+        directory: .
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
          
