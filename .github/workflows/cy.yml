@@ -32,6 +32,7 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
         image: robiwork/demo-app-technana
+        tags: 1.0.0
         registry: docker.io
         enableBuildKit: true
         directory: .
